@@ -1,0 +1,809 @@
+{
+    "summaryPrompt": "EJU戦略：\n日本語370〜380点、数学200点、理科/総合190点が満点。\n難関校の安全圏は合計650点以上。\n\n📊【EJU構成】\n\n- 日本語：370〜380点\n- 理科 or 総合：190〜195点\n- 数学：200点＋記述：50点\n\n🧠【評価観点】\n\n- 学力以外にも書類・面接・日本語運用力・熱意が重視される。\n- 二次試験重視の大学はEJU配点が低め。\n- 基礎問題優先、「基礎を落とさないこと」が最重要。\n- EJU得点率 ≒ 共通テスト大学ボーダー（80〜90%が合格圏）。\n\n※得点はあくまで目安。出願の際は学科・年度ごとに公式情報をご確認ください。",
+    "scoreTable": {
+    "University of Tokyo":   { "total": 740, "japanese": 370, "math": 190, "science": 180 },
+    "Kyoto University":      { "total": 740, "japanese": 370, "math": 190, "science": 180 },
+    "Osaka University":      { "total": 680, "japanese": 360, "math": 160, "science": 160 },
+    "Tokyo University of Science": { "total": 680, "japanese": 360, "math": kkaido University':{ total: 680, japanese: 360, math: 160, science: 160 },
+    
+    'Kyushu University':{ total: 680, japanese: 360, math: 160, science: 160 },
+    
+    'Hitotsubashi University': { total: 740, japanese: 370, math: 190, humanities: 180 },
+    
+    'Tokyo Institute of Technology':             { total: 640, japanese: 290, math: 160, science: 150 },
+    
+    'Chiba University':                          { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Hiroshima University':                      { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Kanazawa University':                       { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Nagoya Institute of Technology':            { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Ochanomizu University':                     { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Saitama University':                        { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Shiga University of Medical Science':       { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Shinshu University':                        { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Tokyo Gakugei University':                  { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Tokyo University of Agriculture & Technology': { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Tokyo University of Foreign Studies':       { total: 680, japanese: 360, math: 160, science: 160 },
+    
+    'University of Tsukuba':                     { total: 680, japanese: 360, math: 160, science: 160 },
+    
+    'Yokohama National University':              { total: 660, japanese: 340, math: 160, science: 160 },
+    
+    'University of Tokyo':        { total: 740, japanese: 370, math: 190, science: 180 },
+    
+    'Kyoto University':           { total: 740, japanese: 370, math: 190, science: 180 },
+    
+    'Osaka University':           { total: 680, japanese: 360, math: 160, science: 160 },
+    
+    'Tohoku University':          { total: 680, japanese: 360, math: 160, science: 160 },
+    
+    'Nagoya University':          { total: 680, japanese: 360, math: 160, science: 160 },
+    
+    // …add all national & public here…
+    
+    // Popular Private
+    
+    'Waseda University':          { total: 710, japanese: 370, math: 170, science: 170 },
+    
+    'Keio University':            { total: 710, japanese: 370, math: 170, science: 170 },
+    
+    'Sophia University':          { total: 660, japanese: 340, math: 160, science: 160 },
+    
+    'Tokyo University of Science':{ total: 680, japanese: 360, math: 190, science:  –  }, // no sci dept
+    
+    // …add all popular private here…
+    
+    };
+    
+    // ────────── 文系（Humanities）──────────
+    
+    export const ejuScoreHumanities: Record\\\<string, Omit\\\<EjuScore,'science'>> = {
+    
+    'University of Tokyo':            { total: 730, japanese: 360, math: 190 },
+    
+    'Kyoto University':               { total: 730, japanese: 360, math: 190 },
+    
+    'Osaka University':               { total: 700, japanese: 350, math: 180 },
+    
+    // …add mid-tier & other national here…
+    
+    'Aichi University of Education':             { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Akita University':                          { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Asahikawa Medical University':              { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Ehime University':                          { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Fukushima University':                      { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Gifu University':                           { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Gunma University':                          { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Hirosaki University':                       { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Hokkaido University of Education':          { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Hyogo Univ. of Teacher Education':          { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Ibaraki University':                        { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Iwate University':                          { total: 520, japanese: 260, math: 130, science: 130 },
+    
+    'Joetsu Univ. of Education':                 { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Kagawa University':                         { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kagoshima University':                      { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kitami Institute of Technology':            { total: 420, japanese: 200, math: 110, science: 110 },
+    
+    'Kochi University':                          { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kumamoto University':                       { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kyoto Institute of Technology':             { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Kyushu Institute of Technology':            { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Mie University':                            { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Miyagi Univ. of Education':                 { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Muroran Institute of Technology':           { total: 445, japanese: 225, math: 110, science: 110 },
+    
+    'Nagaoka Univ. of Technology':               { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Nagasaki University':                      { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Nara Univ. of Education':                   { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Nara Women’s University':                   { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Naruto Univ. of Education':                 { total: 560, japanese: 300, math: 130, science: 130 },
+    
+    'Niigata University':                        { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Obihiro Univ. of Agriculture & Veterinary Med.': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Oita University':                           { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Okayama University':                        { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Otaru Univ. of Commerce':                   { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Saga University':                           { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Shiga University':                          { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Shimane University':                        { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Shizuoka University':                       { total: 480, japanese: 220, math: 130, science: 130 },
+    
+    'Tokushima University':                      { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Tokyo University of Marine Science & Tech.':{ total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Tokyo University of the Arts':              { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Fukui':                       { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Miyazaki':                    { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Toyama':                      { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Yamanashi':                   { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Utsunomiya University':                     { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Wakayama University':                       { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Yamagata University':                       { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Yamaguchi University':                      { total: 600, japanese: 320, math: 140, science: 140
+    
+    // ────────── 公立大学 ──────────
+    
+    'Akita International University':                  { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Aichi Prefectural University':                       { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Hiroshima City University':                         { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kobe City Univ. of Foreign Studies':                { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Kochi University of Technology':                    { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kyoto Prefectural University':                      { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Nagoya City University':                            { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Osaka Metropolitan University':                     { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Prefectural University of Hiroshima':               { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Saitama Prefectural University':                    { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Tokyo Metropolitan University':                     { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'University of Aizu':                                 { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'University of Hyogo':                                { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Kitakyushu':                          { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Nagano':                              { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Shizuoka':                            { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Yokohama City University':                          { total: 630, japanese: 330, math: 150, science: 150 },
+    
+    'Aichi University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Akita University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Asahikawa Medical University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Chiba University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Ehime University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Fukuoka University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Fukushima University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Gifu University': { total: 600, japanese: 320, math: 140, science: 140 }, // Japanese 320+; writing 40+; total \\\~640+
+    
+    'Gunma University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Hirosaki University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Hiroshima University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Hitotsubashi University': { total: 740, japanese: 380, math: 180, science: 180 }, //
+    
+    'Hokkaido University': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Hokkaido University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Hyogo University of Teacher Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Ibaraki University': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Iwate University': { total: 520, japanese: 260, math: 130, science: 130 }, // Japanese 260+ (others estimated)
+    
+    'Joetsu University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Kagawa University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kagoshima University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kanazawa University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Kitami Institute of Technology': { total: 420, japanese: 200, math: 110, science: 110 }, // Japanese 200+; math+science total 220+
+    
+    'Kobe University': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Kochi University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kumamoto University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Kyoto Institute of Technology': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Kyoto University': { total: 740, japanese: 380, math: 180, science: 180 }, //
+    
+    'Kyushu Institute of Technology': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Kyushu University': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Mie University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Miyagi University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Muroran Institute of Technology': { total: 445, japanese: 225, math: 110, science: 110 }, // Japanese 225+; math+science total 220+
+    
+    'Nagaoka University of Technology': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Nagasaki University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Nagoya Institute of Technology': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Nagoya University': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Nara University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Nara Women\u2019s University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Naruto University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'National Institute of Fitness and Sports in Kanoya': { total: 450, japanese: 250, math: 100, science: 100 },
+    
+    'Niigata University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Obihiro University of Agriculture and Veterinary Medicine': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Ochanomizu University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Oita University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Okayama University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Osaka University': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Osaka Kyoiku University': { total: 560, japanese: 300, math: 130, science: 130 }, //
+    
+    'Otaru University of Commerce': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Saga University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Saitama University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Shiga University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Shiga University of Medical Science': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Shimane University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Shinshu University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Shizuoka University': { total: 480, japanese: 220, math: 130, science: 130 }, // Japanese 220+ (others estimated)
+    
+    'Tohoku University': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Tokushima University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Tokyo Gakugei University': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Tokyo Institute of Technology': { total: 640, japanese: 290, math: 180, science: 170 }, // Japanese 290+; physics+chem+math total 350+
+    
+    'Tokyo University of Agriculture and Technology': { total: 630, japanese: 330, math: 150, science: 150 }, //
+    
+    'Tokyo University of Foreign Studies': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'Tokyo University of Marine Science and Technology': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Tokyo University of the Arts': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Fukui': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Miyazaki': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Tokyo': { total: 740, japanese: 380, math: 180, science: 180 }, //
+    
+    'University of Toyama': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'University of Tsukuba': { total: 680, japanese: 360, math: 160, science: 160 }, //
+    
+    'University of Yamanashi': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Utsunomiya University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Wakayama University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Yamagata University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Yamaguchi University': { total: 600, japanese: 320, math: 140, science: 140 },
+    
+    'Yokohama National University': { total: 660, japanese: 340, math: 160, science: 160 }
+    
+    // Popular Private Humanities
+    
+    'Waseda University':              { total: 680, japanese: 340, math: 170 },
+    
+    'Keio University':                { total: 680, japanese: 340, math: 170 },
+    
+    'Sophia University':              { total: 650, japanese: 300, math: 170 },
+    
+    // …add MARCH, 関関同立, 産近甲龍 humanities here…
+    
+    };
+    
+    // ────────── Private Univ. 詳細（文理別 Recommended “safe” scores）──────────
+    
+    humanities: Omit\\\<EjuScore,'science'>;
+    
+    science:    EjuScore;
+    
+    }
+    
+    export const ejuScorePrivates: Record\\\<string, EjuScorePair> = {
+    
+    // Private Universities
+    
+    // (Waseda, Keio, etc. \\\~650 total)
+    
+    'Waseda University': { total: 650, japanese: 300, math: 170 },
+    
+    'Keio University': { total: 650, japanese: 300, math: 170 },
+    
+    'Sophia University': { total: 650, japanese: 300, math: 170 },
+    
+    // (MARCH universities \\\~630 total)
+    
+    'Meiji University': { total: 630, japanese: 290, math: 170 },
+    
+    'Aoyama Gakuin University': { total: 630, japanese: 290, math: 170 },
+    
+    'Rikkyo University': { total: 630, japanese: 290, math: 170 },
+    
+    'Chuo University': { total: 630, japanese: 290, math: 170 },
+    
+    'Hosei University': { total: 630, japanese: 290, math: 170 },
+    
+    // (Kansai "Kan-Kan-Do-Ritsu" universities \\\~630 total)
+    
+    'Kansai University': { total: 630, japanese: 290, math: 170 },
+    
+    'Kwansei Gakuin University': { total: 630, japanese: 290, math: 170 },
+    
+    'Doshisha University': { total: 630, japanese: 290, math: 170 },
+    
+    'Ritsumeikan University': { total: 630, japanese: 290, math: 170 },
+    
+    // (Mid-tier privates incl. "San-Kin-Ko-Ryu" \\\~580 total)
+    
+    'Asia University': { total: 580, japanese: 260, math: 160 },
+    
+    'Kindai University': { total: 580, japanese: 260, math: 160 },
+    
+    'Komazawa University': { total: 580, japanese: 260, math: 160 },
+    
+    'Konan University': { total: 580, japanese: 260, math: 160 },
+    
+    'Kyoto Sangyo University': { total: 580, japanese: 260, math: 160 },
+    
+    'Meiji Gakuin University': { total: 580, japanese: 260, math: 160 },
+    
+    'Nihon University': { total: 580, japanese: 260, math: 160 },
+    
+    'Ryukoku University': { total: 580, japanese: 260, math: 160 },
+    
+    'Seikei University': { total: 580, japanese: 260, math: 160 },
+    
+    'Senshu University': { total: 580, japanese: 260, math: 160 },
+    
+    'Teikyo University': { total: 580, japanese: 260, math: 160 },
+    
+    'Tokai University': { total: 580, japanese: 260, math: 160 },
+    
+    'Toyo University': { total: 580, japanese: 260, math: 160 }
+    
+    };
+    
+    export const ejuScorePrivates = {
+    
+    // Estimated 'safe' EJU scores (target plus margin) for key private universities in Tokyo & Kansai
+    
+    'Tokyo University of Science': {
+    
+    humanities: { total: 630, japanese: 290, math: 170 },
+    
+    science:    { total: 680, japanese: 260, math: 190 }
+    
+    },
+    
+    'Sophia University': {
+    
+    humanities: { total: 620, japanese: 300, math: 160 },
+    
+    science:    { total: 660, japanese: 280, math: 180 }
+    
+    },
+    
+    'Seikei University': {
+    
+    humanities: { total: 550, japanese: 280, math: 150 },
+    
+    science:    { total: 600, japanese: 260, math: 170 }
+    
+    },
+    
+    'Seijo University': {
+    
+    humanities: { total: 550, japanese: 280, math: 150 },
+    
+    science:    { total: 600, japanese: 260, math: 170 }
+    
+    },
+    
+    'Meiji Gakuin University': {
+    
+    humanities: { total: 530, japanese: 270, math: 140 },
+    
+    science:    { total: 580, japanese: 250, math: 160 }
+    
+    },
+    
+    'Musashi University': {
+    
+    humanities: { total: 530, japanese: 270, math: 140 },
+    
+    science:    { total: 580, japanese: 250, math: 160 }
+    
+    },
+    
+    'Komazawa University': {
+    
+    humanities: { total: 550, japanese: 280, math: 150 },
+    
+    science:    { total: 600, japanese: 260, math: 170 }
+    
+    },
+    
+    'Toyo University': {
+    
+    humanities: { total: 540, japanese: 270, math: 140 },
+    
+    science:    { total: 590, japanese: 250, math: 160 }
+    
+    },
+    
+    'Tokyo Woman's Christian University': {
+    
+    humanities: { total: 520, japanese: 260, math: 120 },
+    
+    science:    { total: 570, japanese: 240, math: 150 }
+    
+    },
+    
+    'Kyoto Women's University': {
+    
+    humanities: { total: 520, japanese: 260, math: 120 },
+    
+    science:    { total: 570, japanese: 240, math: 150 }
+    
+    },
+    
+    'Doshisha Women's College of Liberal Arts': {
+    
+    humanities: { total: 520, japanese: 260, math: 120 },
+    
+    science:    { total: 570, japanese: 240, math: 150 }
+    
+    },
+    
+    'Kyoto Sangyo University': {
+    
+    humanities: { total: 550, japanese: 270, math: 130 },
+    
+    science:    { total: 600, japanese: 250, math: 160 }
+    
+    },
+    
+    'Kindai University': {  // 近畿大学 (Kindai)
+    
+    humanities: { total: 580, japanese: 280, math: 140 },
+    
+    science:    { total: 630, japanese: 260, math: 180 }
+    
+    },
+    
+    'Ryukoku University': {
+    
+    humanities: { total: 550, japanese: 270, math: 130 },
+    
+    science:    { total: 600, japanese: 250, math: 160 }
+    
+    }
+    
+    };
+    
+    'Tokyo University of Science': {
+    
+    humanities: { total: 630, japanese: 290, math: 170 },
+    
+    science:    { total: 680, japanese: 260, math: 190, science:  – },
+    
+    },
+    
+    'Sophia University': {
+    
+    humanities: { total: 620, japanese: 300, math: 160 },
+    
+    science:    { total: 660, japanese: 280, math: 180, science:  – },
+    
+    },
+    
+    'Seikei University': {
+    
+    humanities: { total: 550, japanese: 280, math: 150 },
+    
+    science:    { total: 600, japanese: 260, math: 170, science:  – },
+    
+    },
+    
+    // …add other privates here…
+    
+    }; 
+    
+`;
+
+
+export const ejuScoreTable = {
+    // National Universities
+    'Aichi University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:0]{index=0}
+    'Akita University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Asahikawa Medical University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Chiba University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:1]{index=1}
+    'Ehime University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Fukuoka University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:2]{index=2}
+    'Fukushima University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Gifu University': { total: 600, japanese: 320, math: 140, science: 140 }, // Japanese 320+; writing 40+; total ~640+&#8203;:contentReference[oaicite:3]{index=3}
+    'Gunma University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Hirosaki University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Hiroshima University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:4]{index=4}
+    'Hitotsubashi University': { total: 740, japanese: 380, math: 180, science: 180 }, // :contentReference[oaicite:5]{index=5}
+    'Hokkaido University': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:6]{index=6}
+    'Hokkaido University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:7]{index=7}
+    'Hyogo University of Teacher Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:8]{index=8}
+    'Ibaraki University': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:9]{index=9}
+    'Iwate University': { total: 520, japanese: 260, math: 130, science: 130 }, // Japanese 260+&#8203;:contentReference[oaicite:10]{index=10} (others estimated)
+    'Joetsu University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:11]{index=11}
+    'Kagawa University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Kagoshima University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Kanazawa University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:12]{index=12}
+    'Kitami Institute of Technology': { total: 420, japanese: 200, math: 110, science: 110 }, // Japanese 200+; math+science total 220+&#8203;:contentReference[oaicite:13]{index=13}
+    'Kobe University': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:14]{index=14}
+    'Kochi University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Kumamoto University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Kyoto Institute of Technology': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:15]{index=15}
+    'Kyoto University': { total: 740, japanese: 380, math: 180, science: 180 }, // :contentReference[oaicite:16]{index=16}
+    'Kyushu Institute of Technology': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:17]{index=17}
+    'Kyushu University': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:18]{index=18}
+    'Mie University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Miyagi University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:19]{index=19}
+    'Muroran Institute of Technology': { total: 445, japanese: 225, math: 110, science: 110 }, // Japanese 225+; math+science total 220+&#8203;:contentReference[oaicite:20]{index=20}
+    'Nagaoka University of Technology': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Nagasaki University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Nagoya Institute of Technology': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:21]{index=21}
+    'Nagoya University': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:22]{index=22}
+    'Nara University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:23]{index=23}
+    'Nara Women\u2019s University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Naruto University of Education': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:24]{index=24}
+    'National Institute of Fitness and Sports in Kanoya': { total: 450, japanese: 250, math: 100, science: 100 },
+    'Niigata University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:25]{index=25}
+    'Obihiro University of Agriculture and Veterinary Medicine': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Ochanomizu University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:26]{index=26}
+    'Oita University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Okayama University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:27]{index=27}
+    'Osaka University': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:28]{index=28}
+    'Osaka Kyoiku University': { total: 560, japanese: 300, math: 130, science: 130 }, // :contentReference[oaicite:29]{index=29}
+    'Otaru University of Commerce': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Saga University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Saitama University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:30]{index=30}
+    'Shiga University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Shiga University of Medical Science': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:31]{index=31}
+    'Shimane University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Shinshu University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:32]{index=32}
+    'Shizuoka University': { total: 480, japanese: 220, math: 130, science: 130 }, // Japanese 220+&#8203;:contentReference[oaicite:33]{index=33} (others estimated)
+    'Tohoku University': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:34]{index=34}
+    'Tokushima University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Tokyo Gakugei University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:35]{index=35}
+    'Tokyo Institute of Technology': { total: 640, japanese: 290, math: 180, science: 170 }, // Japanese 290+; physics+chem+math total 350+&#8203;:contentReference[oaicite:36]{index=36}
+    'Tokyo University of Agriculture and Technology': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:37]{index=37}
+    'Tokyo University of Foreign Studies': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:38]{index=38}
+    'Tokyo University of Marine Science and Technology': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Tokyo University of the Arts': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Fukui': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Miyazaki': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Tokyo': { total: 740, japanese: 380, math: 180, science: 180 }, // :contentReference[oaicite:39]{index=39}
+    'University of Toyama': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Tsukuba': { total: 680, japanese: 360, math: 160, science: 160 }, // :contentReference[oaicite:40]{index=40}
+    'University of Yamanashi': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Utsunomiya University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Wakayama University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Yamagata University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Yamaguchi University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Yokohama National University': { total: 660, japanese: 340, math: 160, science: 160 }, // Total ~680/850 (~80%)&#8203;:contentReference[oaicite:41]{index=41}
+  
+    // Public Universities
+    'Akita International University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Aichi Prefectural University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Hiroshima City University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Kobe City University of Foreign Studies': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:42]{index=42}
+    'Kochi University of Technology': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Kyoto Prefectural University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:43]{index=43}
+    'Nagoya City University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:44]{index=44}
+    'Osaka Metropolitan University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:45]{index=45}
+    'Prefectural University of Hiroshima': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Saitama Prefectural University': { total: 600, japanese: 320, math: 140, science: 140 },
+    'Tokyo Metropolitan University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:46]{index=46}
+    'University of Aizu': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:47]{index=47}
+    'University of Hyogo': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Kitakyushu': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Nagano': { total: 600, japanese: 320, math: 140, science: 140 },
+    'University of Shizuoka': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:48]{index=48}
+    'Yokohama City University': { total: 630, japanese: 330, math: 150, science: 150 }, // :contentReference[oaicite:49]{index=49}
+  
+    // Private Universities
+    'Waseda University': { total: 710, japanese: 370, math: 170, science: 170 }, // :contentReference[oaicite:50]{index=50}
+    'Keio University': { total: 710, japanese: 370, math: 170, science: 170 }, // :contentReference[oaicite:51]{index=51}
+    'Meiji University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:52]{index=52}
+    'Aoyama Gakuin University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:53]{index=53}
+    'Rikkyo University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:54]{index=54}
+    'Chuo University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:55]{index=55}
+    'Hosei University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:56]{index=56}
+    'Kwansei Gakuin University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:57]{index=57}
+    'Kansai University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:58]{index=58}
+    'Doshisha University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:59]{index=59}
+    'Ritsumeikan University': { total: 630, japanese: 310, math: 160, science: 160 }, // :contentReference[oaicite:60]{index=60}
+    'Kyoto Sangyo University': { total: 580, japanese: 300, math: 140, science: 140 }, // :contentReference[oaicite:61]{index=61}
+    'Kinki University': { total: 580, japanese: 300, math: 140, science: 140 }, // :contentReference[oaicite:62]{index=62}
+    'Osaka Institute of Technology': { total: 580, japanese: 300, math: 140, science: 140 }, // :contentReference[oaicite:63]{index=63}
+    'Ryukoku University': { total: 580, japanese: 300, math: 140, science: 140 }, // :contentReference[oaicite:64]{index=64}
+  }
+export const ejuScoreHumanities = {
+    // National Universities
+    'University of Tokyo': { total: 730, japanese: 360, math: 190 },
+    'Kyoto University': { total: 730, japanese: 360, math: 190 },
+    // Other top national universities (~680-730 total)
+    'Osaka University': { total: 700, japanese: 350, math: 180 },
+    'Tohoku University': { total: 700, japanese: 350, math: 180 },
+    'Nagoya University': { total: 700, japanese: 350, math: 180 },
+    'Hokkaido University': { total: 700, japanese: 350, math: 180 },
+    'Kyushu University': { total: 700, japanese: 350, math: 180 },
+    'Hitotsubashi University': { total: 700, japanese: 350, math: 180 },
+    // Mid-tier national universities (~640-680 total)
+    'University of Tsukuba': { total: 650, japanese: 330, math: 170 },
+    'Kobe University': { total: 670, japanese: 350, math: 170 },
+    'Hiroshima University': { total: 650, japanese: 330, math: 170 },
+    'Chiba University': { total: 650, japanese: 330, math: 170 },
+    'Yokohama National University': { total: 650, japanese: 330, math: 170 },
+    'Tokyo University of Foreign Studies': { total: 650, japanese: 330, math: 170 },
+    'Ochanomizu University': { total: 650, japanese: 330, math: 170 },
+    'Kanazawa University': { total: 650, japanese: 330, math: 170 },
+    'Okayama University': { total: 650, japanese: 330, math: 170 },
+    // Other national universities (~600 total)
+    'Akita University': { total: 600, japanese: 270, math: 150 },
+    'Ehime University': { total: 600, japanese: 270, math: 150 },
+    'Fukushima University': { total: 600, japanese: 270, math: 150 },
+    'Gifu University': { total: 600, japanese: 270, math: 150 },
+    'Gunma University': { total: 600, japanese: 270, math: 150 },
+    'Ibaraki University': { total: 600, japanese: 270, math: 150 },
+    'Iwate University': { total: 600, japanese: 270, math: 150 },
+    'Kagawa University': { total: 600, japanese: 270, math: 150 },
+    'Kagoshima University': { total: 600, japanese: 270, math: 150 },
+    'Kochi University': { total: 600, japanese: 270, math: 150 },
+    'Kumamoto University': { total: 600, japanese: 270, math: 150 },
+    'Mie University': { total: 600, japanese: 270, math: 150 },
+    'Miyazaki University': { total: 600, japanese: 270, math: 150 },
+    'Nagasaki University': { total: 600, japanese: 270, math: 150 },
+    'Nara Women\'s University': { total: 600, japanese: 270, math: 150 },
+    'Niigata University': { total: 600, japanese: 270, math: 150 },
+    'Oita University': { total: 600, japanese: 270, math: 150 },
+    'Saga University': { total: 600, japanese: 270, math: 150 },
+    'Saitama University': { total: 600, japanese: 270, math: 150 },
+    'Shiga University': { total: 600, japanese: 270, math: 150 },
+    'Shimane University': { total: 600, japanese: 270, math: 150 },
+    'Shinshu University': { total: 600, japanese: 270, math: 150 },
+    'Shizuoka University': { total: 600, japanese: 270, math: 150 },
+    'Tokushima University': { total: 600, japanese: 270, math: 150 },
+    'Tokyo Gakugei University': { total: 600, japanese: 270, math: 150 },
+    'Tottori University': { total: 600, japanese: 270, math: 150 },
+    'University of Fukui': { total: 600, japanese: 270, math: 150 },
+    'University of Toyama': { total: 600, japanese: 270, math: 150 },
+    'University of the Ryukyus': { total: 600, japanese: 270, math: 150 },
+    'Wakayama University': { total: 600, japanese: 270, math: 150 },
+    'Yamagata University': { total: 600, japanese: 270, math: 150 },
+    'Yamaguchi University': { total: 600, japanese: 270, math: 150 },
+    // Public Universities
+    'Tokyo Metropolitan University': { total: 620, japanese: 280, math: 160 },
+    'Osaka Metropolitan University': { total: 600, japanese: 270, math: 150 },
+    'Yokohama City University': { total: 580, japanese: 260, math: 150 },
+    'Nagoya City University': { total: 580, japanese: 260, math: 150 },
+    'Kyoto Prefectural University': { total: 550, japanese: 250, math: 140 },
+    'University of Shizuoka': { total: 500, japanese: 230, math: 120 },
+    'Aichi Prefectural University': { total: 550, japanese: 250, math: 140 },
+    'Prefectural University of Hiroshima': { total: 520, japanese: 240, math: 130 },
+    'Nara Prefectural University': { total: 520, japanese: 240, math: 130 },
+    'Prefectural University of Kumamoto': { total: 500, japanese: 230, math: 120 },
+    'Hiroshima City University': { total: 520, japanese: 240, math: 130 },
+    'Kobe City University of Foreign Studies': { total: 550, japanese: 250, math: 140 },
+    'University of Hyogo': { total: 550, japanese: 250, math: 140 },
+    'Akita International University': { total: 550, japanese: 250, math: 140 },
+    'The University of Shiga Prefecture': { total: 500, japanese: 230, math: 120 },
+    'Miyagi University': { total: 500, japanese: 230, math: 120 },
+    'Iwate Prefectural University': { total: 500, japanese: 230, math: 120 },
+    'Miyazaki Prefectural University': { total: 480, japanese: 220, math: 110 },
+    'Fukuoka Prefectural University': { total: 480, japanese: 220, math: 110 },
+    // Private Universities
+    // (Waseda, Keio, etc. ~650 total)
+    'Waseda University': { total: 680, japanese: 340, math: 170 },
+    'Keio University': { total: 680, japanese: 340, math: 170 },
+    'Sophia University': { total: 680, japanese: 340, math: 170 },
+    // (MARCH universities ~630 total)
+    'Meiji University': { total: 630, japanese: 330, math: 140 },
+    'Aoyama Gakuin University': { total: 630, japanese: 330, math: 140 },
+    'Rikkyo University': { total: 630, japanese: 330, math: 140 },
+    'Chuo University': { total: 630, japanese: 330, math: 140 },
+    'Hosei University': { total: 630, japanese: 330, math: 140 },
+    // (Kansai "Kan-Kan-Do-Ritsu" universities ~630 total)
+    'Kansai University': { total: 630, japanese: 330, math: 140 },
+    'Kwansei Gakuin University': { total: 630, japanese: 330, math: 140 },
+    'Doshisha University': { total: 630, japanese: 330, math: 140 },
+    'Ritsumeikan University': { total: 630, japanese: 330, math: 140 },
+    // (Mid-tier privates incl. "San-Kin-Ko-Ryu" ~580 total)
+    'Asia University': { total: 580, japanese: 320, math: 120 },
+    'Kindai University': { total: 580, japanese: 320, math: 120 },
+    'Komazawa University': { total: 580, japanese: 320, math: 120 },
+    'Konan University': { total: 580, japanese: 320, math: 120 },
+    'Kyoto Sangyo University': { total: 580, japanese: 320, math: 120 },
+    'Meiji Gakuin University': { total: 580, japanese: 320, math: 120 },
+    'Nihon University': { total: 580, japanese: 320, math: 120 },
+    'Ryukoku University': { total: 580, japanese: 320, math: 120 },
+    'Seikei University': { total: 580, japanese: 320, math: 120 },
+    'Senshu University': { total: 580, japanese: 320, math: 120 },
+    'Teikyo University': { total: 580, japanese: 320, math: 120 },
+    'Tokai University': { total: 580, japanese: 320, math: 120 },
+    'Toyo University': { total: 580, japanese: 320, math: 120 }
+  };`

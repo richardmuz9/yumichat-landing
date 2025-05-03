@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "Hoshino Yumi Study in Japan Advisor App",
+    "slug": "hoshinoyumistudyapp",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/yumi-icon.png",
+    "splash": {
+      "backgroundColor": "#ffffff",
+      "resizeMode": "contain",
+      "image": "./assets/yumi-avatar.png"
+    },
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.richardzeng.yumichat",
+      "buildNumber": "1.0.0",
+      "jsEngine": "hermes",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.richardzeng.yumichat",
+      "versionCode": 1,
+      "jsEngine": "hermes"
+    },
+    "jsEngine": "hermes",
+    "description": "Your study advisor app for Japanese university admissions with Yumi!",
+    "plugins": [
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "44a7923e-948d-48e7-89e5-49f3bd47aeab"
+      }
+    },
+    "owner": "richardzeng"
+  }
+}
