@@ -5,13 +5,18 @@ import {
   ejuScoreHumanities,
   EjuScore
 } from './ejuScores';
-import { yumiKnowledge } from './yumiknowledge'; // ✅ Added import
+import { yumiKnowledge } from './yumiknowledge';
 
-const DASHSCOPE_API_KEY = 'sk-e02ce353358e48eab63bcca09c3c317a'; // ← replace with your actual DashScope key
+const DASHSCOPE_API_KEY = 'sk-e02ce353358e48eab63bcca09c3c317a';
+const OPENROUTER_API_KEY = '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'; // replace with actual key
 
 export class OpenRouterService {
+  // If you want to force DashScope in China, set this to true manually
+  static useDashScope = true;
+
   static async sendMessage(
     message: string,
+    model: string = 'qwen-turbo', // default is DashScope model
     targetUniversity?: string
   ): Promise<string> {
     if (!message?.trim()) {
@@ -21,45 +26,71 @@ export class OpenRouterService {
     const systemPrompt = await this.buildSystemPrompt(targetUniversity);
     const userPrompt = this.formatYumiPersonality(message);
 
-    try {
-      const res = await fetch(
-        'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions',
-        {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${DASHSCOPE_API_KEY}`,
-          },
-          body: JSON.stringify({
-            model: 'qwen-turbo',
-            messages: [
-              { role: 'system', content: systemPrompt },
-              { role: 'user', content: userPrompt }
-            ],
-            result_format: 'message',
-            max_tokens: 300
-          }),
-        }
-      );
-
-      const data = await res.json();
-      console.log('[DashScope Response]', JSON.stringify(data, null, 2));
-
-      const reply = data?.choices?.[0]?.message?.content;
-      if (!reply || typeof reply !== 'string') {
-        throw new Error('無効な返答形式です (Invalid or missing content)');
-      }
-
-      return reply;
-    } catch (err: any) {
-      console.error('🔥 DashScope fetch error:', err?.message || err);
-      return 'Yumiは応答できませんでした…ネットワークを確認してもう一度試してね！';
+    if (this.useDashScope || model.startsWith('qwen')) {
+      return this.callDashScope(systemPrompt, userPrompt);
+    } else {
+      return this.callOpenRouter(systemPrompt, userPrompt, model);
     }
   }
 
-  private static async buildSystemPrompt(
-    targetUniversity?: string
-  ): Promise<string> {
+  private static async callDashScope(system: string, user: string): Promise<string> {
+    try {
+      const res = await fetch('https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${DASHSCOPE_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model: 'qwen-turbo',
+          messages: [
+            { role: 'system', content: system },
+            { role: 'user', content: user }
+          ],
+          result_format: 'message',
+          max_tokens: 300
+        }),
+      });
+
+      const data = await res.json();
+      const reply = data?.choices?.[0]?.message?.content;
+      return typeof reply === 'string' ? reply : 'Yumiの返答が取得できませんでした。';
+    } catch (err: any) {
+      console.error('🔥 DashScope error:', err?.message || err);
+      return 'Yumiは応答できませんでした…中国での接続問題の可能性があります。';
+    }
+  }
+
+  private static async callOpenRouter(system: string, user: string, model: string): Promise<string> {
+    try {
+      const res = await fetch('https://openrouter.ai/api/v1/chat/completions', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${OPENROUTER_API_KEY}`,
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            { role: 'system', content: system },
+            { role: 'user', content: user }
+          ]
+        }),
+      });
+  
+      const data = await res.json();
+      const reply = data?.choices?.[0]?.message?.content;
+      if (!reply || typeof reply !== 'string') throw new Error('Empty reply');
+  
+      return reply;
+    } catch (err) {
+      console.warn('⚠️ GPT-4o failed. Trying Qwen fallback...');
+      return this.callDashScope(system, user);
+    }
+  }
+  
+
+  private static async buildSystemPrompt(targetUniversity?: string): Promise<string> {
     const lang = (await AsyncStorage.getItem('language')) || 'English';
     const mood = (await AsyncStorage.getItem('mood')) || 'Dere';
 

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "Hoshino Yumi Study in Japan Advisor App",
-    "slug": "hoshinoyumistudyapp",
+    "name": "YumiChat",
+    "slug": "yumichat",
     "platforms": [
       "ios",
       "android"
